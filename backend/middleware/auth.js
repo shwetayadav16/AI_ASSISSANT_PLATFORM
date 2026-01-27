@@ -3,9 +3,9 @@ import User from '../models/User.js';
  const protect =async(req,res,next)=>{
     let token;
     //Check if token exists in Authorization header
-    if(req.headers.authization && req.headers.authorzation.startsWith('Bearer')){
+    if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
         try{
-            token.req.headers.authorization.split(' ')[1];
+            token=req.headers.authorization.split(' ')[1];
             //Verify token 
             const decoded=jwt.verify(token,process.env.JWT_SECRET);
             req.user= await User.findById(decoded.id).select('-password');
