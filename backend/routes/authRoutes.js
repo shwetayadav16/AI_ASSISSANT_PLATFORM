@@ -8,8 +8,6 @@ import {
     changePassword
 } from '../controllers/authController.js';
 import protect from '../middleware/auth.js';
-import authMiddleware from '../middleware/authMiddleware.js';
-
 
 const router=express.Router();
 //Vaidation middleware
