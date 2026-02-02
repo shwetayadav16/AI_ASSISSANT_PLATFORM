@@ -133,7 +133,7 @@ export const getProfile=async(req, res,next)=>{
 //@access Private
 export const updateProfile=async(req,res,next)=>{
     try{
-        const{username,email,profileImage}=req.body;
+        const { username, email, profileImage } = req.body;
         const user= await User.findById(req.user._id);
         if(username) user.username=username;
         if(email) user.email=email;
@@ -151,12 +151,12 @@ export const updateProfile=async(req,res,next)=>{
         })
     }
     catch(error){
-        next(error)
+        next(error);
     }
 };
 
 //@desc Change user password
-//@route PUT /api/auth/change-password
+//@route Post /api/auth/change-password
 //@access Private
 export const changePassword=async(req,res,next)=>{   
     try{
