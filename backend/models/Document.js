@@ -57,4 +57,4 @@ const documentSchema= new mongoose.Schema({
 {timestamps:true});
 documentSchema.index({userId:1,uploadDate:-1});
 const Document=mongoose.model('Document',documentSchema);
-export  default Documents;
+export  default Document;

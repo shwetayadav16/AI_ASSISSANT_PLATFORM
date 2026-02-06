@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const flashcardSchema = new mongoose.Schema(
     {
         userId:{
-            type:mongoos.Schema.Types.ObjectId,
+            type:mongoose.Schema.Types.ObjectId,
             ref:"User",
             required:true
         },

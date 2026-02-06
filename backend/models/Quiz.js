@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
-const quizScheme= new mongoose.Schema({
+const quizSchema= new mongoose.Schema({
     userId:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'User',
         required:true
     },
-    documenId:{
+    documentId:{
             type:mongoose.Schema.Types.ObjectId,
             ref:'Document',
             required:true
